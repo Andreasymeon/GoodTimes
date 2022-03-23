@@ -1,0 +1,9 @@
+.footer {
+  background-color:  #222;
+}
+
+.footer-link {
+  width: 131px;
+  height: 40px;
+  background-image: url(assets/images/logo.svg);
+}

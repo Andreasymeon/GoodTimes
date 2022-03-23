@@ -1,0 +1,166 @@
+:root {
+  --orange: #ff3c15;
+} 
+
+body {
+  font-family: 'HK-Grotesk-Medium', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #414141;
+  
+  background-image: url(assets/images/background.jpg);
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+a {
+  text-decoration: none;
+  color: #414141;
+}
+
+.heading {
+ 	color: #fff;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #fff;
+  font-family: 'HK-Grotesk-Bold', sans-serif;
+  font-size: 110px;
+  line-height: 1;
+}
+
+.heading-orange {
+  font-size: 120px;
+  -webkit-text-stroke-color: #ff3c15;
+  margin-bottom: 3rem;
+  color: var(--orange);
+}
+
+.container {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+blockquote {
+  color: var(--orange);
+  font-size: 36px;
+}
+
+.cite {
+  display: inline-block;
+  color: var(--orange);
+  line-height: 1;
+  padding:  24px 18px;
+  border-radius: 100%;
+  border: solid 3px var(--orange);
+  text-transform: uppercase;
+  margin-top: 12px;
+}
+
+
+.speaker-image {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.speaker-name,
+.speaker-title {
+  margin: 0;
+  line-height: 1.33;
+}
+
+.speaker-title {
+  color: #979797;
+  font-family: 'HK-Grotesk-Regular', sans-serif;
+}
+
+#schedule {
+    max-width: 100%;
+}
+
+.schedule-container {
+  border: solid 3px var(--orange);
+  /*  this gives natural scrolling behavior on touch screen  */
+  -webkit-overflow-scrolling: touch;
+}
+
+.schedule-container::-webkit-scrollbar {
+  width: 12px;
+  height: 14px;
+  background-color: transparent;
+}
+
+.schedule-container::-webkit-scrollbar-thumb {
+  background-color: var(--orange);
+  border:  solid 2px #fff;
+}
+
+.schedule {
+  padding: 48px 24px;
+}
+
+.schedule-time {
+  color: var(--orange);
+  font-size: 36px;
+  font-family: 'HK-Grotesk-Bold', sans-serif;
+	line-height: 1;
+  margin-bottom: 8px;
+}
+
+.schedule-day {
+  /*  trick to vertical align and center text  */
+  writing-mode:  vertical-rl;
+  text-orientation: sideways;
+  transform:  rotate(180deg);
+  text-align: center;
+  padding: 24px;
+  line-height: 1;
+  color: #fff;
+  background-color: var(--orange);
+}
+
+.fade {
+  opacity:  0;
+  transition:  opacity 0.5s ease;
+}
+
+.visible {
+  opacity: 1;
+}
+
+@media (max-width: 800px) {
+  body {
+    font-size:  16px;
+    background-size: auto 120vh;
+  }
+  .heading {
+    font-size:  72px;
+    -webkit-text-stroke-width: 2px;
+  }
+  .button {
+    padding:  18px 32px;
+    font-size:  16px;
+  }
+  .heading-orange{
+    margin-bottom: 24px;
+  }
+  blockquote {
+    line-height: 1.2;
+  }
+  .schedule-day {
+    padding: 12px;
+    -webkit-text-stroke-width: 1px;
+  }
+}
+
+@media (max-width: 400px) {
+  .heading {
+    font-size: 48px;
+  }
+}
+
+
+

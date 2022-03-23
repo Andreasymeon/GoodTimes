@@ -1,0 +1,120 @@
+.register-image {
+  background-image: url(assets/images/location.jpg);
+  background-position: center bottom;
+}
+
+input {
+  border:  none;
+  line-height: 1.5;
+  font-size: 16px;
+  height: 48px;
+  width: 100%;
+  padding: 0 12px;
+  outline: none;
+  color: #32325D;
+}
+
+input::placeholder {
+  color:  #AAB7C4;
+}
+
+.bg-orange {
+  background-color: #FFE6DD;
+}
+
+.register {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+/* stack register form over buying tickets */
+.front,
+.back {
+  grid-area: 1/1;
+  
+}
+
+/* animation for toggling with js once clicked on the register button */
+.front {
+  transition:  transform 0.5s ease;
+}
+
+.front.slide-up {
+    transform: translateY(-100%);
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+.button {
+  display: inline-block;
+  background-color:  var(--orange);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: none;
+  padding: 24px 72px;
+  font-family: 'HK-Grotesk-Bold', sans-serif;
+}
+
+.button-small {
+  font-size: 14px;
+  padding: 12px 24px;
+}
+
+.button-outline {
+  background-color: transparent;
+  border: solid 2px var(--orange);
+  color: var(--orange);
+}
+
+.StripeElement {
+  background-color: #fff;
+  padding: 12px;
+}
+
+/* lock the form when submitting */
+.form-fields {
+  transition: opacity 0.5s ease;
+}
+
+.processing .form-fields {
+  opacity: 0.5;
+  pointer-events:  none;
+}
+
+/* taken from https://tobiasahlin.com/spinkit/ */
+.spinner {
+  width: 40px;
+  height: 40px;
+  background-color: var(--orange);
+  position: absolute;
+  top:  50%;
+  left: 50%; 
+  margin-left: -20px;
+  margin-top: -20px;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  pointer-events:  none;
+	z-index: 10;
+  box-shadow: 0 0 11px 0 rgb(254, 145, 127);
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+/* show spinner when processing form */
+.processing .spinner {
+  opacity: 1;
+}
+
+@keyframes sk-rotateplane {
+  0% { 
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  } 50% { 
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  } 100% { 
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
